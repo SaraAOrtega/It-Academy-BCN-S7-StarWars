@@ -1,14 +1,12 @@
-
-
 .img {
-    width: 17%;
+    width: 45%;
     height: auto; 
     margin-top: 35px; 
+    padding-bottom: 30px;
 }
 
 .back-nav {
     background-color: black;
-
 }
 
 .navbar {
@@ -19,49 +17,35 @@
 }
 
 .custom-div {
-  
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-content: space-between;
     list-style: none;
     margin-top: 70px;
+    margin-bottom: 70px;
     border-top: 1px solid rgb(74, 73, 73);
     border-bottom: 1px solid rgb(74, 73, 73);
     justify-content: space-between;
 }
 
-.link-home{
-    border: 1px, solid,rgb(74, 73, 73);
-    padding: 20px;
-    padding-right: 40px;
-    padding-left: 40px;
+.link-home,
+.link-starship {
+    border: 1px solid rgb(74, 73, 73);
+    padding: 20px 40px;
     border-top: none;
     border-bottom: none;
-    border-right: none;
-}
-
-.link-starship{
-    border: 1px, solid, rgb(74, 73, 73);
-    border-top: none;
-    border-bottom: none;
-    padding: 20px;
-    padding-right: 40px;
-    padding-left: 40px;
+    cursor: pointer; 
+    display: inline-block; 
 }
 
 .link-home:hover,
 .link-starship:hover {
-  border-bottom: 2px solid rgb(119, 117, 117); 
+    background-color: rgb(73, 73, 73); 
 }
 
 a {
     text-decoration: none; 
     color: white; 
-  }
-
-
-  .back-nav {
-    position: relative;
 }
 
 .buttons-container {

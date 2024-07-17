@@ -14,10 +14,7 @@
     padding: 2px;
   }
   
-  .container-details {
-    padding: 0 170px; 
-  }
-  
+ 
   .starship-card {
     background-color: hsl(120, 1%, 15%);
     border-top-right-radius: 8px;
