@@ -1,0 +1,20 @@
+.form-custom {
+    background-color:white; 
+    border-radius: 40px;
+  } 
+
+  .form-control {
+    background-color: #dcd9d9;
+    border-radius: 10px;
+    padding: 10px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; 
+  }
+
+  .btn {
+    background-color: yellow;
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 15px;
+
+
+  }

@@ -1,0 +1,11 @@
+:root{
+    font-family: monospace; 
+}
+
+body {
+    background: url('./assets/starry-night-sky.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+

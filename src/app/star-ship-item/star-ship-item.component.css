@@ -1,0 +1,66 @@
+  
+  h2 {
+    text-align: left;
+    margin-top: 20px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    text-align: start;
+    border-top: 1px solid rgb(74, 73, 73);
+    border-bottom: 1px solid rgb(74, 73, 73);
+    color: #c7c4c4;
+    padding: 2px;
+  }
+  
+  .container-details {
+    padding: 0 170px; 
+  }
+  
+  .starship-card {
+    background-color: hsl(120, 1%, 15%);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-left: 4px solid rgb(253, 23, 23); 
+    color: #c7c4c4;
+  }
+  .starship-details p {
+    margin: 0.5rem 0;
+  }
+  
+  .starship-details p strong {
+    font-weight: 600;
+  }
+
+  .starship-details {
+    padding-bottom: 60px;
+  }
+  
+  .img-fluid {
+    max-width: 100%; 
+    height: auto; 
+  }
+
+  a {
+    text-decoration: none; 
+    color: white; 
+  }
+
+  .btn {
+  margin-left: 5px;
+  margin-bottom: 10px;
+  padding: 8px 16px;
+  background-color: hsl(63, 100%, 50%);
+  color: black;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #9cb01ab9;
+  }
+
+  
+  

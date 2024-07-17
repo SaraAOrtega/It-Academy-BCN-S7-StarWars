@@ -1,0 +1,77 @@
+
+
+.img {
+    width: 17%;
+    height: auto; 
+    margin-top: 35px; 
+}
+
+.back-nav {
+    background-color: black;
+
+}
+
+.navbar {
+    height: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.custom-div {
+  
+    display: flex;
+    justify-content:center;
+    align-content: space-between;
+    list-style: none;
+    margin-top: 70px;
+    border-top: 1px solid rgb(74, 73, 73);
+    border-bottom: 1px solid rgb(74, 73, 73);
+    justify-content: space-between;
+}
+
+.link-home{
+    border: 1px, solid,rgb(74, 73, 73);
+    padding: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+}
+
+.link-starship{
+    border: 1px, solid, rgb(74, 73, 73);
+    border-top: none;
+    border-bottom: none;
+    padding: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.link-home:hover,
+.link-starship:hover {
+  border-bottom: 2px solid rgb(119, 117, 117); 
+}
+
+a {
+    text-decoration: none; 
+    color: white; 
+  }
+
+
+  .back-nav {
+    position: relative;
+}
+
+.buttons-container {
+    position: absolute;
+    top: 10px; 
+    right: 20px; 
+}
+
+.welcome {
+    color: rgb(250, 252, 253);
+    padding: 50px;
+    font-size: large;
+}

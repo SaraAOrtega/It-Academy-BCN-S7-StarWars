@@ -1,0 +1,22 @@
+.form-custom {
+    background-color:white; 
+    border-radius: 40px;
+  } 
+
+  .form-control {
+    background-color: #dcd9d9; 
+    border-radius: 10px;
+    padding: 10px;
+    
+  }
+
+  .btn {
+    background-color: yellow;
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 15px;
+    margin-bottom: 10px;
+
+
+
+  }

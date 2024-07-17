@@ -1,0 +1,21 @@
+
+@if (starShipResults$ | async; as resultObject) {
+  <div class="row justify-content-center"></div>
+<ul class="starShip-list d-flex align-items-center justify-content-center mt-5">
+    @for(item of resultObject.results; track item.name){
+        <li class="starship-list-item">
+        <a [routerLink]="['/starshipInfo', item.url.split('/').slice(-2, -1)[0]]">
+          <p class="starShip-name text-uppercase fw-bold ps-3 mt-2">
+            <span>{{ item.name }}</span>
+          </p>
+          <p class="ps-3">{{ item.model }}</p>
+        </a>
+      </li>
+    }
+  </ul>
+<div class="pagination-buttons mt-3">
+    <button (click)="loadPreviousPage()" [disabled]="isFirstPage()">Previous</button>
+    <button (click)="loadNextPage()" [disabled]="isLastPage()">More Ships</button>
+  </div>
+}
+

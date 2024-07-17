@@ -1,0 +1,36 @@
+@if (starShip$ | async; as StarShip) {
+  <div class="container-details mx-5">
+    <h1 class="title"><b>STARSHIP</b></h1>
+    <div class="row align-items-center">
+      <div class="col-12 col-md-5 text-center mt-4 mb-4">
+        <img [src]="imgUrl" alt="{{ StarShip.name }}" (error)="imageError()" class="img-fluid">
+      </div>
+      <div class="starship-card col-12 col-md-7 mt-4 mb-4">
+        <h2>{{ StarShip.name.toUpperCase() }}</h2>
+        <div class="starship-details">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <p><strong>Model:</strong> {{ StarShip.model }}</p>
+              <p><strong>Manufacturer:</strong> {{ StarShip.manufacturer }}</p>
+              <p><strong>Cost in credits:</strong> {{ StarShip.cost_in_credits }}</p>
+              <p><strong>Length:</strong> {{ StarShip.length }}</p>
+              <p><strong>Max atmosphering speed:</strong> {{ StarShip.max_atmosphering_speed }}</p>
+              <p><strong>Crew:</strong> {{ StarShip.crew }}</p>
+            </div>
+            <div class="col-12 col-md-6">
+              <p><strong>Passengers:</strong> {{ StarShip.passengers }}</p>
+              <p><strong>Cargo capacity:</strong> {{ StarShip.cargo_capacity }}</p>
+              <p><strong>Consumables:</strong> {{ StarShip.consumables }}</p>
+              <p><strong>Hyperdrive rating:</strong> {{ StarShip.hyperdrive_rating }}</p>
+              <p><strong>MGLT:</strong> {{ StarShip.MGLT }}</p>
+              <p><strong>Starship class:</strong> {{ StarShip.starship_class }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4">
+          <button class="btn" [routerLink]="['/starships']">Back to Starships List</button>
+        </div>
+      </div>
+    </div>
+  </div>
+}
