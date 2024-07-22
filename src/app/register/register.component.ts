@@ -47,14 +47,10 @@ export class RegisterComponent implements OnInit {
 
 
   register() {
-    this.submitted = true;
-
-
     if (this.registerForm.invalid) {
-      alert('Please fill in all required fields correctly before submitting.');
+      this.errorMessage = 'Please fill out all fields correctly.';
       return;
     }
-
 
     this.authService.register(this.registerForm.value).subscribe({
       next: () => {

@@ -4,6 +4,7 @@
       <form
         [formGroup]="registerForm"
         (ngSubmit)="register()"
+        novalidate
         class="form-custom mt-5 border p-4 shadow"
       >
         <h2 class="text-center mb-4">REGISTER</h2>
@@ -61,7 +62,7 @@
         <div class="form-group mb-3">
           <label for="confirmPassword" class="form-label">Confirm Password:</label>
           <input
-            type="password"
+            type="confirmpassword"
             formControlName="confirmPassword"
             id="confirmPassword"
             class="form-control"
@@ -73,9 +74,16 @@
           </div>
         </div>
 
+        
+
         <button type="submit" class="btn w-100"> 
           Register
         </button>
+        @if (errorMessage) {
+          <div>
+            <span class="text-danger">{{ errorMessage }}</span>
+          </div>
+          }
 
       </form>
     </div>

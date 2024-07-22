@@ -14,6 +14,7 @@ import { RouterOutlet } from '@angular/router';
 })
 export class LoginComponent {
   loginForm: FormGroup;
+  errorMessage = '';
 
   constructor(private authService: AuthService, private fb: FormBuilder) {
     this.loginForm = this.fb.group({
@@ -28,8 +29,9 @@ export class LoginComponent {
   }
 
   login(): void {
+
     if (this.loginForm.invalid) {
-      alert('Please fill in all fields correctly');
+      this.errorMessage = 'Please fill out all fields correctly.';
       return;
     }
 

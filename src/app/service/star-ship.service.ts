@@ -21,7 +21,7 @@ export class StarShipService {
   }
 
   getShipById(id: string): Observable<StarShip> {
-    return this.http.get<StarShip>(`${this.apiUrl}/${id}`);
+    return this.http.get<StarShip>(`${this.apiUrl}${id}`);
   }
 
   getStarshipImage(id: string): string {

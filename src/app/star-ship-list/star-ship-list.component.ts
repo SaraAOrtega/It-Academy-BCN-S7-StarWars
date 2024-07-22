@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { StarShipService } from '../service/star-ship.service';
 import { Observable } from 'rxjs';
-import { StarShipResults, StarShip } from './../interfaces/starShip';
+import { StarShipResults } from './../interfaces/starShip';
+import {  map } from 'rxjs/operators';
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { RouterLink, RouterModule} from '@angular/router';
 
@@ -15,9 +16,8 @@ import { RouterLink, RouterModule} from '@angular/router';
 })
 export class StarShipListComponent implements OnInit {
 
-  starShipResults$: Observable<StarShipResults> | undefined;
+  starShipResults$!: Observable<StarShipResults>;
   nextPage: number = 1;
-  starShips: any[] = [];
   totalPages: number = 1;
 
   constructor(private service: StarShipService) {}
@@ -27,17 +27,15 @@ export class StarShipListComponent implements OnInit {
   }
 
   loadStarShips(): void {
-    this.starShipResults$ = this.service.getStarShipList(this.nextPage);
-    this.starShipResults$.subscribe({
-      next: (data: StarShipResults) => {
+    this.starShipResults$ = this.service.getStarShipList(this.nextPage).pipe(
+      map(data => {
         this.totalPages = Math.ceil(data.count / 10);
-        this.starShips = data.results;
-      },
-      error: (err) => {
-        console.error('Error fetching data:', err);
-      }
-    });
+        return data;
+      })
+    );
   }
+  
+
 
   loadNextPage(): void {
     if (this.nextPage < this.totalPages) {

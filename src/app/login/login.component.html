@@ -44,6 +44,11 @@
  
 
         <button type="submit" class="btn w-100"> Login</button>
+        @if (errorMessage) {
+          <div>
+            <span class="text-danger">{{ errorMessage }}</span>
+          </div>
+          }
         <div class="text-center my-3">
           <span>If you don't have an account, register below</span>
         </div>
