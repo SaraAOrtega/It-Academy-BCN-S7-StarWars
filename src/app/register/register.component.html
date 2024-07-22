@@ -1,23 +1,12 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <form
-        [formGroup]="registerForm"
-        (ngSubmit)="register()"
-        novalidate
-        class="form-custom mt-5 border p-4 shadow"
-      >
+      <form [formGroup]="registerForm" (ngSubmit)="register()" novalidate class="form-custom mt-5 border p-4 shadow">
         <h2 class="text-center mb-4">REGISTER</h2>
 
         <div class="form-group mb-3">
           <label for="fullName" class="form-label">Full Name:</label>
-          <input
-            type="text"
-            formControlName="fullName"
-            id="fullName"
-            class="form-control"
-            required
-          />
+          <input type="text" formControlName="fullName" id="fullName" class="form-control" required />
 
           <div class="text-danger mt-1" [hidden]="!isControlInvalid('fullName')">
             <small>@if (registerForm.controls['fullName'].errors?.['required']) { Full Name is required }</small>
@@ -28,62 +17,50 @@
 
         <div class="form-group mb-3">
           <label for="email" class="form-label">Email:</label>
-          <input
-            type="email"
-            formControlName="email"
-            id="email"
-            class="form-control"
-            required
-          />
+          <input type="email" formControlName="email" id="email" class="form-control" required />
 
           <div class="text-danger mt-1" [hidden]="!isControlInvalid('email')">
             <small>@if (registerForm.controls['email'].errors?.['required']) { Email is required }</small>
             <small>@if (registerForm.controls['email'].errors?.['email']) { Enter a valid email }</small>
           </div>
         </div>
-    
+
 
         <div class="form-group mb-3">
           <label for="password" class="form-label">Password:</label>
-          <input
-            type="password"
-            formControlName="password"
-            id="password"
-            class="form-control"
-            required
-          />
+          <input type="password" formControlName="password" id="password" class="form-control" required />
 
           <div class="text-danger mt-1" [hidden]="!isControlInvalid('password')">
             <small>@if (registerForm.controls['password'].errors?.['required']) { Password is required }</small>
-            <small>@if (registerForm.controls['password'].errors?.['minlength']) { Password must be at least 6 characters }</small>
+            <small>@if (registerForm.controls['password'].errors?.['minlength']) { Password must be at least 6
+              characters }</small>
           </div>
         </div>
 
         <div class="form-group mb-3">
           <label for="confirmPassword" class="form-label">Confirm Password:</label>
-          <input
-            type="confirmpassword"
-            formControlName="confirmPassword"
-            id="confirmPassword"
-            class="form-control"
-            required
-          />
+          <input type="Password" formControlName="confirmPassword" id="confirmPassword" class="form-control" required />
           <div class="text-danger mt-1" [hidden]="!isControlInvalid('confirmPassword')">
-            <small>@if (registerForm.controls['confirmPassword'].errors?.['required']) { Confirm Password is required }</small>
+            <small>@if (registerForm.controls['confirmPassword'].errors?.['required']) { Confirm Password is required
+              }</small>
             <small>@if (registerForm.controls['confirmPassword'].errors?.['mismatch']) { Passwords must match }</small>
           </div>
         </div>
 
-        
 
-        <button type="submit" class="btn w-100"> 
+
+
+        <button type="submit" class="btn w-100">
           Register
         </button>
+
         @if (errorMessage) {
-          <div>
-            <span class="text-danger">{{ errorMessage }}</span>
-          </div>
-          }
+        <div>
+          <span class="text-danger">{{ errorMessage }}</span>
+        </div>
+        }
+
+
 
       </form>
     </div>
