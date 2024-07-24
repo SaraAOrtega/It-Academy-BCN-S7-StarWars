@@ -42,16 +42,16 @@
           <input type="Password" formControlName="confirmPassword" id="confirmPassword" class="form-control" required />
           
           <div class="text-danger mt-1">
-            @if (isControlInvalid('confirmPassword') || (submitted && registerForm.hasError('mismatch'))) {
-              @if (registerForm.controls['confirmPassword'].errors?.['required']) {
-                <small>Confirm Password is required</small>
-              }
-              @if (registerForm.controls['confirmPassword'].errors?.['mismatch'] || registerForm.hasError('mismatch')) {
-                <small>Passwords must match</small>
-              }
+          @if (isControlInvalid('confirmPassword') || (submitted && registerForm.hasError('mismatch'))) {
+            @if (registerForm.controls['confirmPassword'].errors?.['required']) {
+              <small>Confirm Password is required</small>
             }
-          </div>
+            @if (registerForm.controls['confirmPassword'].errors?.['mismatch']) {
+              <small>Passwords must match</small>
+            }
+          }
         </div>
+      </div>
 
 
 
